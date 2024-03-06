@@ -1,0 +1,65 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+    <a class="navbar-brand main-heading" href="{% url '' %}">            
+      &nbsp;&nbsp;&nbsp; MediStore App<img src="{% static 'Images/caduceus-symbol.png' %}" alt="Logo" id="logo">
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+  
+    </button>
+  
+  
+    <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+  
+        
+      <ul class="navbar-nav" style="margin-left: auto; margin-right: 30px;">
+          &nbsp;     &nbsp;     &nbsp; 
+  
+          {% if user.is_authenticated %}
+
+            <li class="nav-item">
+            <div class="search-container">
+              <form action="{% url 'search' %}" method="GET">
+                <input name="searchbar" class="searchbar" type="search" placeholder="  Search Medicine">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </form>
+            </div>
+            </li>
+            &nbsp;     &nbsp;     &nbsp; 
+  
+            <li class="nav-item">     
+              <a class="nav-link" href="{% url 'dashboard' %}">Dashboard &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+            </li> 
+            &nbsp;     &nbsp;     &nbsp;   
+            <li class="nav-item"> 
+              <a class="nav-link" href="{% url 'logout' %}">Sign out &nbsp; <i class="fa fa-sign-out" aria-hidden="true"></i> </a> 
+            </li>
+        
+  
+          {% else %}
+        
+            <li class="nav-item"> 
+              <a class="nav-link" href="{% url 'register' %}"> Register </a> 
+            </li>
+            &nbsp;     &nbsp;     &nbsp; 
+            <li class="nav-item">
+  
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+  
+            </li>
+
+          {% endif %}
+      </ul>
+        
+    </div>
+  
+  
+  </nav>

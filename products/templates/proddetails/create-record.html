@@ -1,0 +1,25 @@
+{% extends "proddetails/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container log-width bg-light shadow-md p-5">
+
+    <h3>Medicine Record</h3>
+    <h6>Enter details</h6>
+    <hr style = "border: 5px solid #000">
+    <br>
+    <form action="" method="POST">
+
+        {% csrf_token %}
+        {{form|crispy}} 
+
+        <br>
+        <div class="text-center m-2">
+            <button type="submit" class="btn btn-success">Create Record &nbsp;<i class="fa fa-check-square" aria-hidden="true"></i></button>
+            <a class="btn btn-secondary ps-5 pe-5" href="{% url 'dashboard' %}">Return &nbsp;<i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "proddetails/base.html" %}
+{% block content %}
+{% load static %}
+    {% if result %}
+        <h2>Search Results for "{{query}}"</h2>
+        <table class="table table-hover table-bordered background-table">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
+                <th scope="col">View</th>
+        
+              </tr>
+            </thead>
+            <tbody>
+            {% for record in result %}
+            <div>
+                <tr>
+                    <td>{{record.id}}</td>
+                    <td>{{record.name}}</td>
+                    <td>{{record.price}}</td>
+                    <td>{{record.description}}</td>
+                    <td><a class="btn btn-primary btn-sm" href="{% url 'record' record.id %}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                </tr>
+            </div>
+            {% endfor %}
+         </tbody>
+        </table>
+        
+    {% else %}
+    <div style="text-align: center;">
+        <img src="{% static 'Images/no-results.png' %}" alt="Magnifier" id="magglass" style="width: 20%; height: 20%">
+        <br><br><br>
+        <h3 class="text-center">No results found</h3>
+    </div>
+    {% endif %}
+{% endblock %}

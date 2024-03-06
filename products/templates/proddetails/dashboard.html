@@ -1,0 +1,37 @@
+{% extends "proddetails/base.html" %}
+{% block content %}
+{% load static %}
+<h4> Welcome <b>{{user}}</b> !</h4>
+<hr style = "border: 5px solid #000">
+<div class="text-center">
+    <a class="btn btn-outline-dark btn-sm" href="{% url 'create-record' %}">Add Medicine &nbsp; <i class="fa fa-plus-square" aria-hidden="true"></i></a>
+</div>
+<hr style = "border: 5px solid #000">
+
+<table class="table table-hover table-bordered background-table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+        <th scope="col">View</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    {% if records %}
+        {% for record in records %}
+          <tr>
+            <td>{{record.id}}</td>
+            <td>{{record.name}}</td>
+            <td>{{record.price}}</td>
+            <td>{{record.description}}</td>
+            <td><a class="btn btn-primary btn-sm" href="{% url 'record' record.id %}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+          </tr>
+        {% endfor %}
+    {% endif %}
+    </tbody>
+  </table>
+
+{% endblock %}

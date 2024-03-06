@@ -1,0 +1,137 @@
+
+.log-width{
+    position: relative;
+    border-radius: 15px;
+    width: 600px;
+    
+    
+}
+
+/* .log-width::before{
+
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width: 620px;
+    height: 470px;
+    background: linear-gradient(0deg,transparent,transparent,#000000,#000000,#000000);
+    z-index: -1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+.log-width::after{
+
+    content: '';
+    position: absolute;
+    top: -50%;
+    left:-50%;
+    width: 600px;
+    height: 450px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: -1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+} */
+
+.but-width{
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.custom-padding {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #message-timer {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .fixed-alert {
+        position: fixed;
+        top: 85px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+        z-index: 10;
+    }
+
+    .searchbar{
+        padding: 5px;
+        padding-right: 30px;
+        border-radius: 10px;
+        outline: none;
+
+    }
+    .search-container {
+        position: relative;
+        
+    }
+
+    .fa-search {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        color: #000000;
+        cursor: pointer;
+    }
+
+    #logo{
+        margin-left: 10px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .background-table {
+        
+        opacity: 0.8;
+    }
+
+
+
+    /* .login-container {
+        position: relative;
+        border-radius: 15px;
+        width: 600px;
+    }
+    
+    .login-container::before{
+
+        content: '';
+        position: absolute;
+        top: -50%;
+        left:-50%;
+        width: 600px;
+        background: linear-gradient(60deg,blue,blue);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+    }
+
+    .login-container::after{
+
+        content: '';
+        position: absolute;
+        top: -50%;
+        left:-50%;
+        width: 600px;
+        background: linear-gradient(60deg,pink,pink);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+    } */
