@@ -32,31 +32,12 @@ DjangoMedStoreManager is a Django-based application designed for efficiently man
    ```bash
    cd DjangoMedStoreManager
    ```
-3. Install `virtualenv` (if not already installed):
-
-    ```bash
-    pip install virtualenv
-    ```
-
-4. Set up a virtual environment (optional but recommended):
-
-    ```bash
-    python -m venv env
-    ```
-    For Windows
-    ```bash
-     env\Scripts\activate
-    ```
-    For Linux
-   ```bash
-   env/bin/activate
-   ```
    
-5. **Install dependencies:**
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-6. **Run migrations:**
+4. **Run migrations:**
    ```bash
    python manage.py makemigrations
    python manage.py migrate
