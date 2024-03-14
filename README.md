@@ -32,19 +32,50 @@ DjangoMedStoreManager is a Django-based application designed for efficiently man
    ```bash
    cd DjangoMedStoreManager
    ```
-3. **Install dependencies:**
+3. Install `virtualenv` (if not already installed):
+
+    ```bash
+    pip install virtualenv
+    ```
+
+4. Set up a virtual environment (optional but recommended):
+
+    ```bash
+    python -m venv env
+    ```
+    For Windows
+    ```bash
+     env\Scripts\activate
+    ```
+    For Linux
+   ```bash
+   env/bin/activate
+   ```
+   
+5. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-4. **Run migrations:**
+6. **Run migrations:**
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
-5. **Start the development server**
-   ```bash
-   python manage.py runserver
-   ```
+
+### Usage
+
+1. Create a superuser account for initial access:
+
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+2. Run the development server:
+
+    ```bash
+    python manage.py runserver
+    ```
+
 ## Access the Application:
 
 - Open your web browser and go to [http://localhost:8000/](http://localhost:8000/) to use the web application.
@@ -75,3 +106,6 @@ Feel free to experiment with different requests to ensure the API is working as 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Acknowledgements
+
+- [Django](https://www.djangoproject.com/) - The web framework for perfectionists with deadlines.
